@@ -1,0 +1,26 @@
+inorder(tree T)
+{
+           while (T != NULL)
+           {
+              if (T ->left != NULL)
+              {
+               push(T);  
+               
+               T = T->left;
+               }
+               else
+               {
+                 repeat
+      
+                     print(T->key);
+                 
+                     if(empty-stack())
+                     return;
+                     T=pop();
+                 until (T->right != NULL);
+                 print(T->key);
+                 T= T->right;
+               } /* end of else */
+            } /*end of while*/
+} /*end of inorder*/
+
